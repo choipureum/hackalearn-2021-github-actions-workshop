@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hello Team
-        uses: /.github/actions/hello-team
+        uses: ./.github/actions/hello-team
