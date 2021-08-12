@@ -1,0 +1,18 @@
+name: Joke Issue Maker
+
+description: Get Joke from random-joke and create new Issue
+
+inputs:
+  issueTitle:
+    description: Issue Title
+    required: true
+  joke:
+    description: Joke URL
+    required: true
+  repoToken:
+    description: "Authentication token, use secrets.GITHUB_TOKEN"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
