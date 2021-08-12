@@ -1,0 +1,10 @@
+name: Joke Docker Action
+description: Joke to team
+
+outputs:
+  joke:
+    description: Return joke to team from Joke API
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
