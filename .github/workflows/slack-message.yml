@@ -8,19 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Send GitHub Action trigger data to Slack workflow
+      - name: Send GitHub Action trigger data to Slack via Message
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
         with:
-          payload: "{\"text\":\"GitHub Actions Slack PR Notifier!!!\"}"
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/pull/${{ github.event.number }}| New Pull Request #${{ github.event.number }} by @${{ github.actor }}>\n by \n <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}| ${{ github.workflow }} - ${{ github.job }} : ${{ job.status }}>"}' 
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-
-
-
-
-
-
-
-
