@@ -1,0 +1,15 @@
+name: Random Joke
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout ÇÊ¼ö
+      - uses: actions/checkout@v2
+
+      - name: Random Joke Action for team
+        uses: ./.github/actions/random-joke
+
