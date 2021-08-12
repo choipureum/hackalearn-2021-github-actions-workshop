@@ -1,10 +1,15 @@
 package main
 
-import{
+import(
 	"fmt"
-}
+	"os"
+)
 
 func main() {
-	fmt.Println("Hello Pureum")
-	fmt.Println("Hello Github")
+	leader := os.Getenv("INPUT_LEADER")
+	member := os.Getenv("INPUT_MEMBER")
+
+
+	fmt.Println("Hello " + member)
+	fmt.Println("Hello " + leader)
 }
